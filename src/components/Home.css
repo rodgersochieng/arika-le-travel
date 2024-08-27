@@ -1,0 +1,239 @@
+:root {
+    --orange: #FF7F00;
+    --light-orange: #FFA500;
+    --blue: #1E90FF;
+    --dark-blue: #000080;
+    --white: #FFFFFF;
+  }
+  
+  .home {
+    background-color: var(--white);
+    color: var(--dark-blue);
+  }
+  
+  .navbar {
+    background-color: var(--orange);
+  }
+  
+  .btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 60vh;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item img {
+      height: 40vh;
+    }
+  }
+  
+  .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  #photo-gallery img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  #reviews .carousel-item {
+    min-height: 200px;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .form-control, .btn {
+      font-size: 0.9rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .carousel-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
+    aspect-ratio: 16 / 9; /* This creates a 16:9 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-container {
+      aspect-ratio: 4 / 3; 
+    }
+  }
+
+.notification-wrapper {
+  position: fixed;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1051; 
+}
+
+.notification {
+  margin: 0;
+  padding: 20px;
+  max-width: 400px; 
+  text-align: center;
+}
+
+.modal {
+  z-index: 1050; 
+}
+
+
+/* Contact Us Section Styles */
+#contact-us {
+  background-color: #f0f4f8; /* Light background color */
+}
+
+#contact-us h2 {
+  color: #003366; /* Heading color */
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 15px; /* Rounded corners for the card */
+  background-color: #ffffff; /* White background for the card */
+}
+
+.form-label {
+  font-weight: 600; /* Bold labels */
+  color: #333; /* Label color */
+}
+
+.form-control {
+  border-radius: 8px; /* Rounded corners for input fields */
+  padding: 12px; /* Extra padding for input fields */
+  border: 1px solid #ced4da; /* Light border for inputs */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+textarea.form-control {
+  resize: none; /* Prevent resizing of textarea */
+}
+
+.btn-primary {
+  background-color: #003366; /* Custom button color */
+  border-color: #003366; /* Matching border */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1.1rem; /* Larger font size */
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #002244; /* Darker shade on hover */
+}
+
+.address-section {
+  background-color: #003366; /* Dark background for the address section */
+  color: #ffffff; /* White text */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding around content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.address-section h4 {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: 700;
+}
+
+.address-section p {
+  font-size: 1rem; /* Regular font size */
+  line-height: 1.5; /* Improved readability */
+}
+
+.address-section strong {
+  display: block; /* Ensure strong tags are block elements */
+  margin-bottom: 5px; /* Spacing below each line */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: rotate(0deg);
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.spin-on-scroll {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.spin-on-scroll.spin {
+  transform: rotate(360deg); /* Full spin */
+  opacity: 1; /* Fade in */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay-content {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay-content {
+  transform: translateY(0); /* Slide content up on hover */
+}

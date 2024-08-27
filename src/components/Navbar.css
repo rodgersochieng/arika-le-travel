@@ -1,0 +1,31 @@
+/* Navbar.css */
+.navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    width: 40px; /* Ensure width and height are equal for a perfect circle */
+    height: 40px; /* Ensure width and height are equal for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 10px; /* Adjust spacing between logo and text */
+  }
+  
+  .navbar-email {
+    color: #ffffff; /* Adjust text color */
+    text-decoration: none;
+    font-size: 16px; /* Adjust font size */
+  }
+  
+  .navbar-email:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .email-icon {
+    margin-right: 5px; /* Adjust spacing between icon and text */
+  }
+  
